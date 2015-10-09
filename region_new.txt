@@ -1,0 +1,362 @@
+> source("r1965.2.r")
+> r1965.2.daisy
+Dissimilarities :
+             Capital Region Choongchung    Honam Youngnam
+Choongchung        2.406573                              
+Honam              2.372076    1.079512                  
+Youngnam           1.211347    2.736806 2.184612         
+Kangwon/Jeju       3.552903    1.281340 2.201813 4.012611
+
+Metric :  euclidean 
+Number of objects : 5
+> r1965.diana.2
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]   -1   -4
+[3,]    1   -5
+[4,]    2    3
+Order of objects:
+[1] Capital Region Youngnam       Choongchung    Honam          Kangwon/Jeju  
+Height:
+[1] 1.211347 4.012611 1.079512 2.201813
+Divisive coefficient:
+[1] 0.6618894
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+> r1965.diana.2.k2
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              1              2 
+> r1965.diana.2.k3
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              1              3 
+> r1965.diana.2.k4
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+> source("r1975.2.r")
+> r1975.2.daisy
+Dissimilarities :
+             Capital Region Choongchung     Honam  Youngnam
+Choongchung       3.0288043                                
+Honam             2.6212523   0.6489314                    
+Youngnam          0.4196852   2.6679702 2.2267888          
+Kangwon/Jeju      3.7922634   0.7995785 1.4097095 3.4462755
+
+Metric :  euclidean 
+Number of objects : 5
+> r1975.diana.2
+Merge:
+     [,1] [,2]
+[1,]   -1   -4
+[2,]   -2   -3
+[3,]    2   -5
+[4,]    1    3
+Order of objects:
+[1] Capital Region Youngnam       Choongchung    Honam          Kangwon/Jeju  
+Height:
+[1] 0.4196852 3.7922634 0.6489314 1.4097095
+Divisive coefficient:
+[1] 0.812938
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+> r1975.diana.2.k2
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              1              2 
+> r1975.diana.2.k3
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              1              3 
+> r1975.diana.2.k4
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              3              1              4 
+> source("r1985.2.r")
+> r1985.2.daisy
+Dissimilarities :
+             Capital Region Choongchung     Honam  Youngnam
+Choongchung       3.2510478                                
+Honam             3.0675652   0.3365704                    
+Youngnam          0.9195021   2.3560568 2.2006625          
+Kangwon/Jeju      3.8688549   0.6178266 0.8600942 2.9721206
+
+Metric :  euclidean 
+Number of objects : 5
+> r1985.diana.2
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]   -1   -4
+[4,]    3    2
+Order of objects:
+[1] Capital Region Youngnam       Choongchung    Honam          Kangwon/Jeju  
+Height:
+[1] 0.9195021 3.8688549 0.3365704 0.8600942
+Divisive coefficient:
+[1] 0.8256725
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+> r1985.diana.2.k2
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              1              2 
+> r1985.diana.2.k3
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+> r1985.diana.2.k4
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+> source("r1995.2.r")
+> r1995.2.daisy
+Dissimilarities :
+             Capital Region Choongchung     Honam  Youngnam
+Choongchung       3.3459056                                
+Honam             3.4138188   0.2753155                    
+Youngnam          1.4030208   1.9765591 2.0817446          
+Kangwon/Jeju      4.1276240   0.8260269 0.7143067 2.7847143
+
+Metric :  euclidean 
+Number of objects : 5
+> r1995.diana.2
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]   -1   -4
+[4,]    3    2
+Order of objects:
+[1] Capital Region Youngnam       Choongchung    Honam          Kangwon/Jeju  
+Height:
+[1] 1.4030208 4.1276240 0.2753155 0.8260269
+Divisive coefficient:
+[1] 0.7973314
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+> r1995.diana.2.k2
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              1              2 
+> r1995.diana.2.k3
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+> r1995.diana.2.k4
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+> source("r2005.2.r")
+> r2005.2.daisy
+Dissimilarities :
+             Capital Region Choongchung     Honam  Youngnam
+Choongchung       3.1771533                                
+Honam             3.3606976   0.3900697                    
+Youngnam          1.5151195   2.0008732 2.3009353          
+Kangwon/Jeju      4.0958300   1.0701076 0.7554364 3.0511990
+
+Metric :  euclidean 
+Number of objects : 5
+> r2005.diana.2
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]   -1   -4
+[4,]    3    2
+Order of objects:
+[1] Capital Region Youngnam       Choongchung    Honam          Kangwon/Jeju  
+Height:
+[1] 1.5151195 4.0958300 0.3900697 1.0701076
+Divisive coefficient:
+[1] 0.7616851
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+> r2005.diana.2.k2
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              1              2 
+> r2005.diana.2.k3
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+> r2005.diana.2.k4
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+
+> source("r1965.r")
+> r1965.daisy
+Dissimilarities :
+             Capital Region Choongchung    Honam Youngnam
+Choongchung        3.947855                              
+Honam              3.855088    1.083310                  
+Youngnam           2.431699    2.921061 2.374485         
+Kangwon/Jeju       4.811314    1.286472 2.211374 4.170267
+
+Metric :  euclidean 
+Number of objects : 5
+> r1965.diana
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]   -1   -4
+[4,]    3    2
+Order of objects:
+[1] Capital Region Youngnam       Choongchung    Honam          Kangwon/Jeju  
+Height:
+[1] 2.431699 4.811314 1.083310 2.211374
+Divisive coefficient:
+[1] 0.6158475
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+> r1965.diana.k2
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              1              2 
+> r1965.diana.k3
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+> r1965.diana.k4
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+> source("r1975.r")
+> r1975.daisy
+Dissimilarities :
+             Capital Region Choongchung     Honam  Youngnam
+Choongchung       4.4978984                                
+Honam             4.1751047   0.6533172                    
+Youngnam          2.5091486   2.8005479 2.3580933          
+Kangwon/Jeju      5.0837427   0.8018611 1.4162578 3.5648888
+
+Metric :  euclidean 
+Number of objects : 5
+> r1975.diana
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]   -1   -4
+[4,]    3    2
+Order of objects:
+[1] Capital Region Youngnam       Choongchung    Honam          Kangwon/Jeju  
+Height:
+[1] 2.5091486 5.0837427 0.6533172 1.4162578
+Divisive coefficient:
+[1] 0.6954531
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+> r1975.diana.k2
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              1              2 
+> r1975.diana.k3
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+> r1975.diana.k4
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+> source("r1985.r")
+> r1985.daisy
+Dissimilarities :
+             Capital Region Choongchung     Honam  Youngnam
+Choongchung       4.6362750                                
+Honam             4.4873645   0.3379296                    
+Youngnam          2.6902756   2.4809203 2.3239476          
+Kangwon/Jeju      5.1447322   0.6237543 0.8678904 3.0948610
+
+Metric :  euclidean 
+Number of objects : 5
+> r1985.diana
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]    2   -4
+[4,]   -1    3
+Order of objects:
+[1] Capital Region Choongchung    Honam          Kangwon/Jeju   Youngnam      
+Height:
+[1] 5.1447322 0.3379296 0.8678904 3.0948610
+Divisive coefficient:
+[1] 0.6196753
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+> r1985.diana.k2
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              2              2 
+> r1985.diana.k3
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+> r1985.diana.k4
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+> source("r1995.r")
+> r1995.daisy
+Dissimilarities :
+             Capital Region Choongchung     Honam  Youngnam
+Choongchung       4.6840481                                
+Honam             4.6308470   0.3130487                    
+Youngnam          2.7068127   2.1987482 2.2352949          
+Kangwon/Jeju      5.2941571   0.8268663 0.7381890 2.9589670
+
+Metric :  euclidean 
+Number of objects : 5
+> r1995.diana
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]    2   -4
+[4,]   -1    3
+Order of objects:
+[1] Capital Region Choongchung    Honam          Kangwon/Jeju   Youngnam      
+Height:
+[1] 5.2941571 0.3130487 0.8268663 2.9589670
+Divisive coefficient:
+[1] 0.6333283
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+> r1995.diana.k2
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              2              2 
+> r1995.diana.k3
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+> r1995.diana.k4
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+> source("r2005.r")
+> r2005.daisy
+Dissimilarities :
+             Capital Region Choongchung     Honam  Youngnam
+Choongchung       4.5650329                                
+Honam             4.5918268   0.4175587                    
+Youngnam          2.7665782   2.2206308 2.4407348          
+Kangwon/Jeju      5.2694063   1.0707557 0.7780572 3.2110227
+
+Metric :  euclidean 
+Number of objects : 5
+> r2005.diana
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]    2   -4
+[4,]   -1    3
+Order of objects:
+[1] Capital Region Choongchung    Honam          Kangwon/Jeju   Youngnam      
+Height:
+[1] 5.2694063 0.4175587 1.0707557 3.2110227
+Divisive coefficient:
+[1] 0.6057885
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+> r2005.diana.k2
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              2              2 
+> r2005.diana.k3
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+> r2005.diana.k4
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+> 

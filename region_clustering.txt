@@ -1,0 +1,50 @@
+
+> y1985.diana.en$height
+[1] 1.2888217 4.7711103 0.3669512 1.0044885
+> y1995.diana.en$height
+[1] 1.7994389 5.0040502 0.2202159 0.8287307
+> y2005.diana.en$height
+[1] 2.2234082 5.2328858 0.2771428 0.9133298
+> y1985.diana.en$dc
+[1] 0.8190763
+> y1995.diana.en$dc
+[1] 0.805436
+> y2005.diana.en$dc
+[1] 0.7739514
+> y1985.diana.en.k2<-cutree(as.hclust(y1985.diana.en),k=2)
+> y1985.diana.en.k2
+Capital Region       Youngnam          Honam    Choongchung   Kangwon/Jeju 
+             1              1              2              2              2 
+> y1985.diana.en.k3<-cutree(as.hclust(y1985.diana.en),k=3)
+> y1985.diana.en.k3
+Capital Region       Youngnam          Honam    Choongchung   Kangwon/Jeju 
+             1              2              3              3              3 
+> y1985.diana.en.k4<-cutree(as.hclust(y1985.diana.en),k=4)
+> y1985.diana.en.k4
+Capital Region       Youngnam          Honam    Choongchung   Kangwon/Jeju 
+             1              2              3              3              4 
+> y1995.diana.en.k2<-cutree(as.hclust(y1995.diana.en),k=2)
+> y1995.diana.en.k2
+Capital Region       Youngnam          Honam    Choongchung   Kangwon/Jeju 
+             1              1              2              2              2 
+> y1995.diana.en.k3<-cutree(as.hclust(y1995.diana.en),k=3)
+> y1995.diana.en.k3
+Capital Region       Youngnam          Honam    Choongchung   Kangwon/Jeju 
+             1              2              3              3              3 
+> y1995.diana.en.k4<-cutree(as.hclust(y1995.diana.en),k=4)
+> y1995.diana.en.k4
+Capital Region       Youngnam          Honam    Choongchung   Kangwon/Jeju 
+             1              2              3              3              4 
+> y2005.diana.en.k2<-cutree(as.hclust(y2005.diana.en),k=2)
+> y2005.diana.en.k2
+Capital Region       Youngnam          Honam    Choongchung   Kangwon/Jeju 
+             1              1              2              2              2 
+> y2005.diana.en.k3<-cutree(as.hclust(y2005.diana.en),k=3)
+> y2005.diana.en.k3
+Capital Region       Youngnam          Honam    Choongchung   Kangwon/Jeju 
+             1              2              3              3              3 
+> y2005.diana.en.k4<-cutree(as.hclust(y2005.diana.en),k=4)
+> y2005.diana.en.k4
+Capital Region       Youngnam          Honam    Choongchung   Kangwon/Jeju 
+             1              2              3              3              4 
+> 

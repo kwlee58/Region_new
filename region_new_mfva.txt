@@ -1,0 +1,516 @@
+
+R version 2.10.1 (2009-12-14)
+Copyright (C) 2009 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+
+R은 free 소프트웨어이고, [완전하게 무보증]입니다.
+일정한 조건에 따르면, 자유롭게 이것을 재배포할수가 있습니다.
+배포 조건의 상세한것에 대해서는 'license()' 또는 'licence()' 라고 입력해주십시오
+
+R는 많은 공헌자에의한 공동 프로젝트입니다
+더 자세한것에 대해서는 'contributors()'라고 입력해 주십시오.
+또는, R나 R의 패키지를 출판물로 인용할때의 형식에 대해서는 
+'citation()'라고  입력해주십시오
+'demo()'라고 입력하면, demos를 볼수가 있습니다.
+'help()'라고 한다면, on-line help가 나옵니다.
+'help.start()'로 HTML 브라우저에 의한 help가 보여집니다
+'q()'라고 입력하면 R를 종료합니다
+[이전에 저장된 workspace를 복귀합니다]
+
+> objects()
+  [1] "data"                   "ditto"                 
+  [3] "name.region"            "name.variables"        
+  [5] "r.diana"                "r1965"                 
+  [7] "r1965.2.daisy"          "r1965.daisy"           
+  [9] "r1965.diana"            "r1965.diana.2"         
+ [11] "r1965.diana.2.k2"       "r1965.diana.2.k3"      
+ [13] "r1965.diana.2.k4"       "r1965.diana.k2"        
+ [15] "r1965.diana.k3"         "r1965.diana.k4"        
+ [17] "r1975"                  "r1975.2.daisy"         
+ [19] "r1975.daisy"            "r1975.diana"           
+ [21] "r1975.diana.2"          "r1975.diana.2.k2"      
+ [23] "r1975.diana.2.k3"       "r1975.diana.2.k4"      
+ [25] "r1975.diana.k2"         "r1975.diana.k3"        
+ [27] "r1975.diana.k4"         "r1985"                 
+ [29] "r1985.2.daisy"          "r1985.daisy"           
+ [31] "r1985.diana"            "r1985.diana.2"         
+ [33] "r1985.diana.2.k2"       "r1985.diana.2.k3"      
+ [35] "r1985.diana.2.k4"       "r1985.diana.k2"        
+ [37] "r1985.diana.k3"         "r1985.diana.k4"        
+ [39] "r1995"                  "r1995.2.daisy"         
+ [41] "r1995.daisy"            "r1995.diana"           
+ [43] "r1995.diana.2"          "r1995.diana.2.k2"      
+ [45] "r1995.diana.2.k3"       "r1995.diana.2.k4"      
+ [47] "r1995.diana.k2"         "r1995.diana.k3"        
+ [49] "r1995.diana.k4"         "r2005"                 
+ [51] "r2005.2.daisy"          "r2005.daisy"           
+ [53] "r2005.diana"            "r2005.diana.2"         
+ [55] "r2005.diana.2.k2"       "r2005.diana.2.k3"      
+ [57] "r2005.diana.2.k4"       "r2005.diana.k2"        
+ [59] "r2005.diana.k3"         "r2005.diana.k4"        
+ [61] "region.1965"            "region.1965.diana.2"   
+ [63] "region.1965.diana.2.k2" "region.1965.diana.2.k3"
+ [65] "region.1965.diana.2.k4" "region.1965.diana.3"   
+ [67] "region.1975"            "region.1985"           
+ [69] "region.1995"            "region.2005"           
+ [71] "t1"                     "t2"                    
+ [73] "t3"                     "t4"                    
+ [75] "t5"                     "y1985"                 
+ [77] "y1985.diana"            "y1985.diana.en"        
+ [79] "y1985.diana.en.k2"      "y1985.diana.en.k3"     
+ [81] "y1985.diana.en.k4"      "y1985.diana.k1"        
+ [83] "y1985.diana.k2"         "y1985.diana.k3"        
+ [85] "y1985.diana.mad"        "y1985.diana2"          
+ [87] "y1985.ko"               "y1995"                 
+ [89] "y1995.diana"            "y1995.diana.en"        
+ [91] "y1995.diana.en.k2"      "y1995.diana.en.k3"     
+ [93] "y1995.diana.en.k4"      "y1995.diana.mad"       
+ [95] "y1995.diana2"           "y1995.ko"              
+ [97] "y2005"                  "y2005.diana"           
+ [99] "y2005.diana.en"         "y2005.diana.en.k2"     
+[101] "y2005.diana.en.k3"      "y2005.diana.en.k4"     
+[103] "y2005.diana.mad"        "y2005.diana2"          
+[105] "y2005.ko"              
+> r2005
+               Population Manufacturing.Labors Savings
+Capital Region       48.1                 38.0    64.8
+Choongchung          10.1                 15.0     3.2
+Honam                10.7                  9.6     6.0
+Youngnam             26.9                 37.3    21.3
+Kangwon/Jeju          4.2                  1.3     2.5
+> m.va.1965<-c(37.9,10.5,8.5,34,9)
+> m.va.1975<-c(44.4,7.5,8.9,35.7,3.6)
+> m.va.1985<-c(42.3,6.8,7.4,39.8,3.6)
+> m.va.1995<-c(44.4,10.9,8.9,34,1.8)
+> m.va.2005<-c(37.9,13.9,9.6,37.3,1.4)
+> objects()
+  [1] "data"                   "ditto"                  "m.va.1965"              "m.va.1975"              "m.va.1985"              "m.va.1995"             
+  [7] "m.va.2005"              "name.region"            "name.variables"         "r.diana"                "r1965"                  "r1965.2.daisy"         
+ [13] "r1965.daisy"            "r1965.diana"            "r1965.diana.2"          "r1965.diana.2.k2"       "r1965.diana.2.k3"       "r1965.diana.2.k4"      
+ [19] "r1965.diana.k2"         "r1965.diana.k3"         "r1965.diana.k4"         "r1975"                  "r1975.2.daisy"          "r1975.daisy"           
+ [25] "r1975.diana"            "r1975.diana.2"          "r1975.diana.2.k2"       "r1975.diana.2.k3"       "r1975.diana.2.k4"       "r1975.diana.k2"        
+ [31] "r1975.diana.k3"         "r1975.diana.k4"         "r1985"                  "r1985.2.daisy"          "r1985.daisy"            "r1985.diana"           
+ [37] "r1985.diana.2"          "r1985.diana.2.k2"       "r1985.diana.2.k3"       "r1985.diana.2.k4"       "r1985.diana.k2"         "r1985.diana.k3"        
+ [43] "r1985.diana.k4"         "r1995"                  "r1995.2.daisy"          "r1995.daisy"            "r1995.diana"            "r1995.diana.2"         
+ [49] "r1995.diana.2.k2"       "r1995.diana.2.k3"       "r1995.diana.2.k4"       "r1995.diana.k2"         "r1995.diana.k3"         "r1995.diana.k4"        
+ [55] "r2005"                  "r2005.2.daisy"          "r2005.daisy"            "r2005.diana"            "r2005.diana.2"          "r2005.diana.2.k2"      
+ [61] "r2005.diana.2.k3"       "r2005.diana.2.k4"       "r2005.diana.k2"         "r2005.diana.k3"         "r2005.diana.k4"         "region.1965"           
+ [67] "region.1965.diana.2"    "region.1965.diana.2.k2" "region.1965.diana.2.k3" "region.1965.diana.2.k4" "region.1965.diana.3"    "region.1975"           
+ [73] "region.1985"            "region.1995"            "region.2005"            "t1"                     "t2"                     "t3"                    
+ [79] "t4"                     "t5"                     "y1985"                  "y1985.diana"            "y1985.diana.en"         "y1985.diana.en.k2"     
+ [85] "y1985.diana.en.k3"      "y1985.diana.en.k4"      "y1985.diana.k1"         "y1985.diana.k2"         "y1985.diana.k3"         "y1985.diana.mad"       
+ [91] "y1985.diana2"           "y1985.ko"               "y1995"                  "y1995.diana"            "y1995.diana.en"         "y1995.diana.en.k2"     
+ [97] "y1995.diana.en.k3"      "y1995.diana.en.k4"      "y1995.diana.mad"        "y1995.diana2"           "y1995.ko"               "y2005"                 
+[103] "y2005.diana"            "y2005.diana.en"         "y2005.diana.en.k2"      "y2005.diana.en.k3"      "y2005.diana.en.k4"      "y2005.diana.mad"       
+[109] "y2005.diana2"           "y2005.ko"              
+> r1965
+               Population Manufacturing.Labors Savings
+Capital Region       23.7                 44.5    56.4
+Choongchung          15.3                 12.0     4.6
+Honam                22.5                  7.5     6.1
+Youngnam             31.1                 35.6    21.5
+Kangwon/Jeju          7.4                  2.9     2.7
+> r1965.mfva<-r1965
+> r1975.mfva<-r1975
+> r1985.mfva<-r1985
+> r1995.mfva<-r1995
+> r2005.mfva<-r2005
+> r2005.mfva[,2]<-m.va.1965
+> r2005.mfva<-r2005
+> r1965.mfva[,2]<-m.va.1965
+> r1965.mfva
+               Population Manufacturing.Labors Savings
+Capital Region       23.7                 37.9    56.4
+Choongchung          15.3                 10.5     4.6
+Honam                22.5                  8.5     6.1
+Youngnam             31.1                 34.0    21.5
+Kangwon/Jeju          7.4                  9.0     2.7
+> colnames(r1965.mfva)
+[1] "Population"           "Manufacturing.Labors" "Savings"             
+> colnames(r1965.mfva)[[2]]
+[1] "Manufacturing.Labors"
+> colnames(r1965.mfva)[[2]]<-"Manufac.VA"
+> r1975.mfva[,2]<-m.va.1975
+> colnames(r1975.mfva)[[2]]<-"Manufac.VA"
+> r1985.mfva[,2]<-m.va.1985
+> colnames(r1985.mfva)[[2]]<-"Manufac.VA"
+> r1995.mfva[,2]<-m.va.1995
+> colnames(r1995.mfva)[[2]]<-"Manufac.VA"
+> r2005.mfva[,2]<-m.va.2005
+> colnames(r2005.mfva)[[2]]<-"Manufac.VA"
+> setwd("G:/R_WD/Region.new")
+> library(cluster)
+> objects(patt="r1965.*")
+ [1] "r1965"            "r1965.2.daisy"    "r1965.daisy"      "r1965.diana"      "r1965.diana.2"    "r1965.diana.2.k2" "r1965.diana.2.k3" "r1965.diana.2.k4"
+ [9] "r1965.diana.k2"   "r1965.diana.k3"   "r1965.diana.k4"   "r1965.mfva"      
+> r.diana
+function(x, lab=""){
+#print(paste(lab))
+x.daisy<-daisy(x,stand=TRUE)
+print(x.daisy)
+x.diana<-diana(x,diss=FALSE,stand=TRUE)
+print(x.diana)
+x.diana.k2<-cutree(as.hclust(x.diana),k=2)
+print(x.diana.k2)
+x.diana.k3<-cutree(as.hclust(x.diana),k=3)
+print(x.diana.k3)
+x.diana.k4<-cutree(as.hclust(x.diana),k=4)
+print(x.diana.k4)
+jpeg(paste(lab,".tree.jpg",sep=""))
+plot(x.diana,which.plots=2,main="dendrogram",xlab=paste(lab))
+dev.off()
+jpeg(paste(lab,".banner.jpg",sep=""))
+plot(x.diana,which.plots=1,main="banner")
+dev.off()
+}
+> r.diana(r1965.mfva)
+Dissimilarities :
+             Capital Region Choongchung    Honam Youngnam
+Choongchung        3.983335                              
+Honam              3.815823    1.056068                  
+Youngnam           2.383804    3.104675 2.528610         
+Kangwon/Jeju       4.603352    1.153366 2.192077 4.104723
+
+Metric :  euclidean 
+Number of objects : 5
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]   -1   -4
+[4,]    3    2
+Order of objects:
+[1] Capital Region Youngnam       Choongchung    Honam          Kangwon/Jeju  
+Height:
+[1] 2.383804 4.603352 1.056068 2.192077
+Divisive coefficient:
+[1] 0.6058601
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              1              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+null device 
+          1 
+> r.diana(r1975.mfva)
+Dissimilarities :
+             Capital Region Choongchung     Honam  Youngnam
+Choongchung       4.5655286                                
+Honam             4.1982587   0.6591094                    
+Youngnam          2.5352377   2.7994100 2.2879144          
+Kangwon/Jeju      5.0972282   0.7597935 1.4121571 3.4996666
+
+Metric :  euclidean 
+Number of objects : 5
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]   -1   -4
+[4,]    3    2
+Order of objects:
+[1] Capital Region Youngnam       Choongchung    Honam          Kangwon/Jeju  
+Height:
+[1] 2.5352377 5.0972282 0.6591094 1.4121571
+Divisive coefficient:
+[1] 0.6939179
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              1              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+null device 
+          1 
+> r.diana(r1985.mfva)
+Dissimilarities :
+             Capital Region Choongchung     Honam  Youngnam
+Choongchung       4.6138434                                
+Honam             4.4102261   0.3313506                    
+Youngnam          2.6542132   2.6696479 2.4442344          
+Kangwon/Jeju      5.0184337   0.5105934 0.8336944 3.1294710
+
+Metric :  euclidean 
+Number of objects : 5
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]   -1   -4
+[4,]    3    2
+Order of objects:
+[1] Capital Region Youngnam       Choongchung    Honam          Kangwon/Jeju  
+Height:
+[1] 2.6542132 5.0184337 0.3313506 0.8336944
+Divisive coefficient:
+[1] 0.728807
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              1              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+null device 
+          1 
+> r.diana(r1995.mfva)
+Dissimilarities :
+             Capital Region Choongchung     Honam  Youngnam
+Choongchung       4.7175096                                
+Honam             4.6098172   0.2341301                    
+Youngnam          2.7037302   2.2548887 2.2134580          
+Kangwon/Jeju      5.2676622   0.7227253 0.7329050 2.9318263
+
+Metric :  euclidean 
+Number of objects : 5
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]    2   -4
+[4,]   -1    3
+Order of objects:
+[1] Capital Region Choongchung    Honam          Kangwon/Jeju   Youngnam      
+Height:
+[1] 5.2676622 0.2341301 0.7329050 2.9318263
+Divisive coefficient:
+[1] 0.6430806
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              2              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+null device 
+          1 
+> r.diana(r2005.mfva)
+Dissimilarities :
+             Capital Region Choongchung     Honam  Youngnam
+Choongchung       4.5852655                                
+Honam             4.5799765   0.3428086                    
+Youngnam          2.7664506   2.2662774 2.4250896          
+Kangwon/Jeju      5.2496662   0.9843498 0.7682422 3.1852368
+
+Metric :  euclidean 
+Number of objects : 5
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]    2   -4
+[4,]   -1    3
+Order of objects:
+[1] Capital Region Choongchung    Honam          Kangwon/Jeju   Youngnam      
+Height:
+[1] 5.2496662 0.3428086 0.9843498 3.1852368
+Divisive coefficient:
+[1] 0.6150281
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              2              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+null device 
+          1 
+> r.diana
+function(x, lab=""){
+#print(paste(lab))
+x.daisy<-daisy(x,stand=TRUE)
+print(x.daisy)
+x.diana<-diana(x,diss=FALSE,stand=TRUE)
+print(x.diana)
+x.diana.k2<-cutree(as.hclust(x.diana),k=2)
+print(x.diana.k2)
+x.diana.k3<-cutree(as.hclust(x.diana),k=3)
+print(x.diana.k3)
+x.diana.k4<-cutree(as.hclust(x.diana),k=4)
+print(x.diana.k4)
+jpeg(paste(lab,".tree.jpg",sep=""))
+plot(x.diana,which.plots=2,main="dendrogram",xlab=paste(lab))
+dev.off()
+jpeg(paste(lab,".banner.jpg",sep=""))
+plot(x.diana,which.plots=1,main="banner")
+dev.off()
+}
+> r.diana(r1965.mfva,lab="1965mfva")
+Dissimilarities :
+             Capital Region Choongchung    Honam Youngnam
+Choongchung        3.983335                              
+Honam              3.815823    1.056068                  
+Youngnam           2.383804    3.104675 2.528610         
+Kangwon/Jeju       4.603352    1.153366 2.192077 4.104723
+
+Metric :  euclidean 
+Number of objects : 5
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]   -1   -4
+[4,]    3    2
+Order of objects:
+[1] Capital Region Youngnam       Choongchung    Honam          Kangwon/Jeju  
+Height:
+[1] 2.383804 4.603352 1.056068 2.192077
+Divisive coefficient:
+[1] 0.6058601
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              1              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+null device 
+          1 
+> r.diana(r1975.mfva,lab="1975mfva")
+Dissimilarities :
+             Capital Region Choongchung     Honam  Youngnam
+Choongchung       4.5655286                                
+Honam             4.1982587   0.6591094                    
+Youngnam          2.5352377   2.7994100 2.2879144          
+Kangwon/Jeju      5.0972282   0.7597935 1.4121571 3.4996666
+
+Metric :  euclidean 
+Number of objects : 5
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]   -1   -4
+[4,]    3    2
+Order of objects:
+[1] Capital Region Youngnam       Choongchung    Honam          Kangwon/Jeju  
+Height:
+[1] 2.5352377 5.0972282 0.6591094 1.4121571
+Divisive coefficient:
+[1] 0.6939179
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              1              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+null device 
+          1 
+> r.diana(r1985.mfva,lab="1985mfva")
+Dissimilarities :
+             Capital Region Choongchung     Honam  Youngnam
+Choongchung       4.6138434                                
+Honam             4.4102261   0.3313506                    
+Youngnam          2.6542132   2.6696479 2.4442344          
+Kangwon/Jeju      5.0184337   0.5105934 0.8336944 3.1294710
+
+Metric :  euclidean 
+Number of objects : 5
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]   -1   -4
+[4,]    3    2
+Order of objects:
+[1] Capital Region Youngnam       Choongchung    Honam          Kangwon/Jeju  
+Height:
+[1] 2.6542132 5.0184337 0.3313506 0.8336944
+Divisive coefficient:
+[1] 0.728807
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              1              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+null device 
+          1 
+> r.diana(r1995.mfva,lab="1995mfva")
+Dissimilarities :
+             Capital Region Choongchung     Honam  Youngnam
+Choongchung       4.7175096                                
+Honam             4.6098172   0.2341301                    
+Youngnam          2.7037302   2.2548887 2.2134580          
+Kangwon/Jeju      5.2676622   0.7227253 0.7329050 2.9318263
+
+Metric :  euclidean 
+Number of objects : 5
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]    2   -4
+[4,]   -1    3
+Order of objects:
+[1] Capital Region Choongchung    Honam          Kangwon/Jeju   Youngnam      
+Height:
+[1] 5.2676622 0.2341301 0.7329050 2.9318263
+Divisive coefficient:
+[1] 0.6430806
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              2              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+null device 
+          1 
+> r.diana(r2005.mfva,lab="2005mfva")
+Dissimilarities :
+             Capital Region Choongchung     Honam  Youngnam
+Choongchung       4.5852655                                
+Honam             4.5799765   0.3428086                    
+Youngnam          2.7664506   2.2662774 2.4250896          
+Kangwon/Jeju      5.2496662   0.9843498 0.7682422 3.1852368
+
+Metric :  euclidean 
+Number of objects : 5
+Merge:
+     [,1] [,2]
+[1,]   -2   -3
+[2,]    1   -5
+[3,]    2   -4
+[4,]   -1    3
+Order of objects:
+[1] Capital Region Choongchung    Honam          Kangwon/Jeju   Youngnam      
+Height:
+[1] 5.2496662 0.3428086 0.9843498 3.1852368
+Divisive coefficient:
+[1] 0.6150281
+
+Available components:
+[1] "order"     "height"    "dc"        "merge"     "diss"      "call"      "order.lab" "data"     
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              2              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              2 
+Capital Region    Choongchung          Honam       Youngnam   Kangwon/Jeju 
+             1              2              2              3              4 
+null device 
+          1 
+> 
